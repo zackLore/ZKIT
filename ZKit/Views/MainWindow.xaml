@@ -1,0 +1,98 @@
+﻿<Window x:Class="ZKit.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZKit"
+        mc:Ignorable="d"
+        Title="ZKit" 
+        FontSize="9"
+        Height="720"
+        Width="1028"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/GlobalStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+             
+            <Style TargetType="MenuItem">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Background" Value="#444444" />
+            </Style>
+
+            <Style TargetType="TreeViewItem">
+                <Setter Property="Foreground" Value="{StaticResource med_dark_gray}" />
+            </Style>
+        </ResourceDictionary>
+
+        <!--<Style TargetType="MenuItem">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#444444" />
+        </Style>
+
+        <Style TargetType="TreeViewItem">
+            <Setter Property="Foreground" Value="{StaticResource med_dark_gray}" />
+        </Style>-->
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <!--Menu Bar-->
+        <Menu
+            Grid.Row="0"
+            Grid.Column="0"
+            Background="#444444"
+            >
+            <MenuItem Header="File">
+                <MenuItem Header="Save Project" Command="{Binding SaveProject}"></MenuItem>
+                <MenuItem Header="Load Project" Command="{Binding LoadProject}"></MenuItem>
+                <MenuItem Header="New Project" Command="{Binding AddProject}"></MenuItem>
+                <MenuItem Header="Add>">
+                    <MenuItem Header="New Tool" Command="{Binding AddTool}"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+            
+            <MenuItem Header="Edit">
+                
+            </MenuItem>
+        </Menu>
+        
+        <!--Project Window-->
+        <DockPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Background="{StaticResource med_light_gray}"
+            LastChildFill="True"
+            >
+            <TreeView
+                Name="tv_current_project"
+                DockPanel.Dock="Left"
+                MinWidth="150"
+                HorizontalAlignment="Left"
+                FontSize="15"
+                BorderBrush="#444444"
+                BorderThickness="2"
+                Background="{StaticResource light_gray}"
+                ItemsSource="{Binding TreeViewItems}"
+                DisplayMemberPath="Name"
+                Loaded="TreeView_Loaded"
+                SelectedItemChanged="TreeView_SelectedItemChanged"
+                />
+
+            <ContentPresenter
+                Name="main_content">                
+            </ContentPresenter>
+        </DockPanel>
+        
+        
+    </Grid>
+</Window>

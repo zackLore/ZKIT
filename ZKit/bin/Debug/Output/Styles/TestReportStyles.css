@@ -1,0 +1,65 @@
+.icon
+{
+    height : 40px;
+    width : 120px;
+    font-size : 20px;
+    position : absolute;
+    left : 0px;
+    background : #AAAAAA;
+}
+
+.header
+{
+    height : 40px;
+    width : 1028px;
+    margin : 0 auto;
+    background : #777777;
+    position : relative;
+    left : 0px;
+    top : 0px;
+}
+
+.content
+{
+    width : 1028px;
+    margin : 0 auto;
+}
+
+.links
+{
+    height : 25px;
+    width : 1028px;
+    margin : 0 auto;
+    background : #DDDDDD;
+}
+
+.links ul
+{
+    list-style : none;
+    padding : 2;
+    margin : 2;
+}
+
+.links li
+{
+    display : inline;
+    float : left;
+}
+
+.links a
+{
+    text-decoration : none;
+    display : block;
+    color : #000000;
+    background : #DDDDDD;
+    width : 120px;
+    font-family : arial;
+    font-size : 1.1em;
+}
+
+.links a:hover
+{
+    background : #EEEEEE;
+    color : #333333;
+}
+

@@ -1,0 +1,91 @@
+<html>
+<head>
+<script>
+
+var PersonObj;
+
+function initObjs()
+{
+    PersonObj = new Person();
+    var actions = [];
+    actions.push({ text: '', value: ''});
+    actions.push({ text: 'total', value: 'SUM'});
+    actions.push({ text: 'count', value: 'COUNT'});
+    actions.push({ text: 'average', value: 'AVG'});
+    actions.push({ text: 'maximum value', value: 'MAX'});
+    actions.push({ text: 'minimum value', value: 'MIN'});
+    Person._Action.setItemList(actions, true);
+    var actions2 = [];
+    actions2.push({ text: '', value: ''});
+    actions2.push({ text: 'greater than', value: 'greater than'});
+    actions2.push({ text: 'greater than or equal to', value: 'greater than or equal to'});
+    actions2.push({ text: 'less than', value: 'less than'});
+    actions2.push({ text: 'less than or equal to', value: 'less than or equal to'});
+    actions2.push({ text: 'equal to', value: 'equal to'});
+    actions2.push({ text: 'like', value: 'like'});
+    actions2.push({ text: 'not equal to', value: 'does not equal'});
+    Person._Action2.setItemList(actions2, true);
+    var fields = [];
+    fields.push({ text: 'Name', value: 'Name'});
+    fields.push({ text: 'Age', value: 'Age'});
+    fields.push({ text: 'Height', value: 'Height'});
+    PersonObj._Field.setItemList(fields, true);
+    PersonObj._Field2.setItemList(fields, true);
+}
+</script>
+
+
+<link rel='stylesheet' type='text/css' href='Styles/ProjectStyles.css'></link>
+<script type='text/javascript' src='Scripts\CommonObjects.js'></script>
+<script type='text/javascript' src='Scripts\Project.js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type='text/javascript' src='Scripts\Project_functions.js'></script>
+</head>
+
+<body onload="loadData();initObjs();">
+<div id="header" class="header">
+<div id="icon" class="icon">
+
+Project</div>
+
+
+</div>
+
+<div class="links">
+<ul>
+<li>
+<a href="Person.html">
+
+Person</a>
+
+
+</li>
+
+<li>
+<a href="Reports.html">
+
+Reports</a>
+
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+<div class="content">
+<div id="content">
+
+</div>
+
+
+</div>
+
+
+</body>
+
+
+</html>
+

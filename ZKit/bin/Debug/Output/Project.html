@@ -1,0 +1,111 @@
+<html>
+<head>
+<script>
+
+var PersonObj;
+
+function initObjs()
+{
+    PersonObj = new Person();
+}
+</script>
+
+
+<link rel='stylesheet' type='text/css' href='Styles/ProjectStyles.css'></link>
+<script type='text/javascript' src='Scripts\CommonObjects.js'></script>
+<script type='text/javascript' src='Scripts\Project.js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script type='text/javascript' src='Scripts\Project_functions.js'></script>
+</head>
+
+<body onload="initObjs();">
+<div id="header" class="header">
+<div id="icon" class="icon">
+
+Project</div>
+
+
+</div>
+
+<div class="links">
+<ul>
+<li>
+<a href="Person.html">
+
+Person</a>
+
+
+</li>
+
+<li>
+<a href="Reports.html">
+
+Reports</a>
+
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+<div class="content">
+<form>
+<h2>
+
+Person</h2>
+
+<br /><table>
+<tr>
+<td>
+
+Name</td>
+
+<td>
+<input type="text" id="txt_Person_Name"/>
+</td>
+
+
+</tr>
+
+<tr>
+<td>
+
+Age</td>
+
+<td>
+<input type="text" id="txt_Person_Age"/>
+</td>
+
+
+</tr>
+
+<tr>
+<td>
+
+Height</td>
+
+<td>
+<input type="text" id="txt_Person_Height"/>
+</td>
+
+
+</tr>
+
+
+</table>
+
+<br /><input type="button" value="Save" onclick="save();"/>
+</form>
+
+
+</div>
+
+
+</body>
+
+
+</html>
+

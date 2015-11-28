@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project_one">
+    <tool name="Javascript">
+    <obj name="Guy">
+    <property name="" type="ZKit.Models.PropType">
+
+</property>
+
+    <property name="" type="ZKit.Models.PropType">
+
+</property>
+
+    <property name="Name" type="ZKit.Models.PropType" default_value="Frank">
+
+</property>
+
+
+</obj>
+
+
+</tool>
+
+
+</project>
+

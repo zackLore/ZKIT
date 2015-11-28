@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS tblPerson(
+PersonId INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+Name varchar(255) NULL,
+Age int NULL,
+Height decimal(10, 4) NULL
+);
